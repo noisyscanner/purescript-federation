@@ -18,7 +18,7 @@ Runs using `vite preview` (prod mode) rather than dev mode to give a better idea
 Go to `localhost:6003` to see both apps running.
 Notice that the Halogen stuff is split into its own chunk `Halogen-e2c23f3b.js` for both app-1 and app-2. It's currently requested twice as it's loaded from different servers for app-1 and app-2.
 
-Therefore for prod, if we throw all Vite app output into one bucket, the frontend should only load that chunk if it's not already in the hash.
+Therefore for prod, if we throw all Vite bundles into one bucket, the frontend should only load that chunk if it's not already in the cache.
 In this case, that chunk shouldn't change until we upgrade Halogen.
 
 ## Applications of this
