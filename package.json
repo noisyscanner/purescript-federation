@@ -2,5 +2,8 @@
   "name": "purescript-federation",
   "private": true,
   "version": "0.0.0",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
 }

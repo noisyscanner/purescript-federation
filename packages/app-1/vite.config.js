@@ -1,17 +1,22 @@
 import federation from "@originjs/vite-plugin-federation";
 export default {
-    preview: {
-        port: 6001,
+  preview: {
+    port: 6001,
+  },
+  plugins: [
+    federation({
+      name: "app-1",
+      filename: "remoteEntry.js",
+      // Modules to expose
+      exposes: {
+        "./app": "./main-remote.js",
       },
-    plugins: [
-        federation({
-            name: 'app-1',
-            filename: 'remoteEntry.js',
-            // Modules to expose
-            exposes: {
-                './app': './main-remote.js',
-            },
-            // shared: ['vue']
-        })
-    ]
-}
+      shared: {
+        Effect: {
+          packagePath: "./output/Effect/index.js",
+        },
+      },
+      // shared: ['vue']
+    }),
+  ],
+};
