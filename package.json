@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "pnpm run --filter='!purescript-federation' build"
+    "build": "pnpm run --filter='!purescript-federation' build",
+    "preview": "pnpm run --filter='./packages/*' preview"
   },
   "devDependencies": {
     "fast-glob": "^3.3.1",
