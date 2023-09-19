@@ -3,7 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "build": "pnpm run --filter='!purescript-federation' build"
+  },
   "devDependencies": {
+    "fast-glob": "^3.3.1",
     "prettier": "^3.0.3"
   }
 }
